@@ -1,3 +1,7 @@
+from MenuComidas import crearMenu
+diccionarioFinal, todasComidas, todasEspeciales, todosPrecios = crearMenu()
+
+
 def calcularPrecio(misPedidos, todosPrecios, comidasEspeciales):
     #valores iniciales
     tamanioPedido = 0
@@ -48,7 +52,10 @@ def calcularPrecio(misPedidos, todosPrecios, comidasEspeciales):
             precioInicial = precioInicial+recargoPorEspeciales
             print(f"\nSe pidieron {cantidadDeEspeciales} platos especiales (+5% del valor de cada plato especial -> +{'{:.2f}'.format(recargoPorEspeciales)}): ${'{:.2f}'.format(precioInicial)}")
 
-        return precioInicial
+        return round(precioInicial, 2)
 
     else:
         return -1
+    
+
+print(calcularPrecio([["bandera", 30], ["yapingacho", 30], ["locro de choclo", 30]], todosPrecios, todasEspeciales))
