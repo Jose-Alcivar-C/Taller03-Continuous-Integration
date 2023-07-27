@@ -58,4 +58,4 @@ def calcularPrecio(misPedidos, todosPrecios, comidasEspeciales):
         return -1
     
 
-print(calcularPrecio([["bandera", 30], ["yapingacho", 30], ["locro de choclo", 30]], todosPrecios, todasEspeciales))
+calcularPrecio([["bandera", 2], ["hornado", 4], ["yapingacho", 4]], todosPrecios, todasEspeciales)
